@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Successful</title>
+
+    <style>
+        body{
+            font-family:Arial,sans-serif;
+            background:#f5f5f5;
+            text-align:center;
+            padding:50px;
+        }
+
+        .box{
+            background:white;
+            max-width:700px;
+            margin:auto;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            color:green;
+        }
+
+        .upi{
+            font-size:24px;
+            font-weight:bold;
+            color:#0B1F3A;
+        }
+
+        .qr{
+            width:250px;
+            margin:20px 0;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:12px 25px;
+            background:#25D366;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>✅ Booking Submitted Successfully</h1>
+
+    <h2>Consultation Fee: ₹299</h2>
+
+    <p>Please pay using the QR Code or UPI ID below:</p>
+
+    <img
+        src="{{ url_for('static', filename='images/upi_qr.jpg') }}"
+        alt="UPI QR Code"
+        class="qr"
+    >
+
+    <p class="upi">
+        UPI ID: 7906128706@xl
+    </p>
+
+    <p>
+        Payment karne ke baad screenshot WhatsApp par bhej dein.
+    </p>
+
+    <a
+        href="https://wa.me/917906128706"
+        class="btn"
+        target="_blank"
+    >
+        Send Screenshot on WhatsApp
+    </a>
+
+</div>
+
+</body>
+</html>

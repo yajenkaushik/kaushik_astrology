@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Archived Bookings</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th {
+            background: #0B1F3A;
+            color: white;
+            padding: 10px;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        .btn-restore {
+            background: green;
+            color: white;
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-restore:hover {
+            background: darkgreen;
+        }
+
+        .top-link {
+            display: inline-block;
+            margin-bottom: 15px;
+            text-decoration: none;
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Archived Bookings</h1>
+
+    <!-- Back to Admin -->
+    <a href="/admin" class="top-link">⬅ Back to Admin</a>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Service</th>
+            <th>Action</th>
+        </tr>
+
+        {% for b in bookings %}
+        <tr>
+            <td>{{ b[0] }}</td>
+            <td>{{ b[1] }}</td>
+            <td>{{ b[2] }}</td>
+            <td>{{ b[6] }}</td>
+
+            <td>
+                <a href="/restore/{{ b[0] }}" class="btn-restore">
+                    Restore
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>

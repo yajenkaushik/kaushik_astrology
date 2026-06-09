@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaushik Astrology</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+
+
+<body>
+
+
+    <!-- Navbar -->
+   <nav class="navbar">
+
+    <div class="logo">Kaushik Astrology</div>
+
+    <div class="menu-toggle" id="menu-toggle"> 
+     ☰
+   <div>
+
+    <ul id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+
+        <div class="hero-left">
+            <img src="{{ url_for('static', filename='images/amod.jpg') }}"
+                 alt="Amod Kaushik"
+                 class="profile-pic">
+        </div>
+
+        <div class="hero-right">
+
+            <div class="experience-badge">
+                ⭐ 20+ Years of Trusted Astrology Experience
+            </div>
+
+            <h1>Kaushik Astrology</h1>
+
+            <h2>Amod Kaushik</h2>
+
+            <h3>Expert Astrologer</h3>
+
+            <p>
+                Specialist in Janam Kundli, Marriage Matching,
+                Career Guidance, Vastu Consultation
+                & Planetary Remedies.
+            </p>
+
+            <a href="#booking" class="btn">
+                Book Consultation
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- Stats Section -->
+
+    <section class="stats">
+
+        <div class="stat-box">
+            <h2>20+</h2>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>1000+</h2>
+            <p>Happy Clients</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>Certified</h2>
+            <p>Astrologer</p>
+        </div>
+
+    </section>
+
+    <!-- Services -->
+
+    <section id="services" class="services">
+
+        <h2>Our Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🔮 Janam Kundli</h3>
+            </div>
+
+            <div class="card">
+                <h3>💑 Kundli Matching</h3>
+            </div>
+
+            <div class="card">
+                <h3>💼 Career Guidance</h3>
+            </div>
+
+            <div class="card">
+                <h3>❤️ Love Marriage Consultation</h3>
+            </div>
+
+            <div class="card">
+                <h3>🏠 Vastu Consultation</h3>
+            </div>
+
+            <div class="card">
+                <h3>✨ Planetary Remedies</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+
+    <section id="about" class="about">
+
+        <h2>About Amod Kaushik</h2>
+
+        <p>
+            With 20+ years of experience in Astrology,
+            Kundli Analysis, Marriage Matching,
+            Career Guidance, Vastu Consultation and
+            Planetary Remedies, Amod Kaushik has helped
+            hundreds of people make informed life decisions.
+        </p>
+
+    </section>
+
+    <!-- Achievements Slider -->
+
+    <section class="awards-slider">
+
+        <h2>Achievements & Recognition</h2>
+
+        <div class="slider-track">
+
+            <img src="{{ url_for('static', filename='images/certificate1.jpg') }}">
+            <img src="{{ url_for('static', filename='images/certificate2.jpg') }}">
+            <img src="{{ url_for('static', filename='images/certificate3.jpg') }}">
+
+            <!-- Repeat Images -->
+
+            <img src="{{ url_for('static', filename='images/certificate1.jpg') }}">
+            <img src="{{ url_for('static', filename='images/certificate2.jpg') }}">
+            <img src="{{ url_for('static', filename='images/certificate3.jpg') }}">
+
+        </div>
+
+    </section>
+
+    <!-- Booking Form -->
+
+    <section id="booking" class="contact-form">
+
+        <h2>Book Your Consultation</h2>
+
+        <p>
+            Fill your birth details and our astrologer
+            will contact you shortly.
+        </p>
+
+        <form method="POST">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+            >
+
+           <input
+               type="tel"
+               name="phone"
+               id="phone"
+               placeholder="Phone Number"
+               required
+             >
+
+            <p id="phone-error" style="color:red;"></p>
+
+            <label>Date of Birth</label>
+
+            <input
+                type="date"
+                name="dob"
+                required
+            >
+
+            <label>Birth Time</label>
+
+            <input
+                type="time"
+                name="birth_time"
+                required
+            >
+
+            <input
+                type="text"
+                name="birth_place"
+                placeholder="Birth Place"
+                required
+            >
+
+            <select
+                name="service"
+                required
+            >
+
+                <option value="">
+                    Select Service
+                </option>
+
+                <option>Janam Kundli</option>
+                <option>Kundli Matching</option>
+                <option>Career Guidance</option>
+                <option>Love Marriage Consultation</option>
+                <option>Vastu Consultation</option>
+                <option>Planetary Remedies</option>
+
+            </select>
+
+            <button type="submit">
+                Submit Booking
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Reviews -->
+
+    <section id="reviews" class="reviews">
+
+        <h2>Client Reviews</h2>
+
+        <div class="review-container">
+
+            <div class="review">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>
+                    Excellent guidance and accurate predictions.
+                    Highly satisfied with the consultation.
+                </p>
+            </div>
+
+            <div class="review">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>
+                    Very helpful consultation for career decisions.
+                    Professional and trustworthy advice.
+                </p>
+            </div>
+
+            <div class="review">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>
+                    Highly recommended for Kundli Matching.
+                    Great experience and detailed analysis.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            📱 <a href="tel:7906128706">7906128706</a>
+        </p>
+
+       
+        <p>
+    📸
+    <a href="https://www.instagram.com/amodastrologic?igsh=MWc3bzh3MnhyMDJ3aA%3D%3D"
+       target="_blank">
+       Instagram
+    </a>
+</p>
+
+<p>
+    👍
+    <a href="https://www.facebook.com/share/1Dxc1brHw6/"
+       target="_blank">
+       Facebook
+    </a>
+</p>
+
+     <p>
+            📧
+            <a href="mailto:amodastrologic@gmail.com">
+                amodastrologic@gmail.com
+            </a>
+        </p>
+
+
+    
+     <p>
+            📍 Pahasu, Uttar Pradesh
+        </p>
+
+    </section>
+
+    <!-- WhatsApp Button -->
+
+    <a href="https://wa.me/917906128706"
+       target="_blank"
+       class="wa">
+        💬
+    </a>
+
+    <!-- Footer -->
+
+   <footer>
+    <p>
+        © 2026 Kaushik Astrology. All Rights Reserved.
+        &nbsp; • &nbsp;
+        Designed & Developed by
+        <span class="developer-name">Yajen Kaushik</span>
+    </p>
+</footer>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("nav-menu");
+
+toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const phone = document.getElementById("phone");
+    const error = document.getElementById("phone-error");
+
+    if (!phone || !error) return;
+
+    phone.addEventListener("input", function () {
+
+        let value = phone.value;
+
+        // only numbers
+        if (!/^\d*$/.test(value)) {
+            error.innerText = "Only numbers allowed";
+            return;
+        }
+
+        // max 10 digits
+        if (value.length > 10) {
+            phone.value = value.slice(0, 10);
+            error.innerText = "Only 10 digits allowed";
+            return;
+        }
+
+        // live message
+        if (value.length < 10) {
+            error.innerText = "Enter 10 digit mobile number";
+        } else {
+            error.innerText = "";
+        }
+    });
+
+});
+</script>
+</body>
+</html>
